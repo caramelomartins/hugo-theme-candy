@@ -1,0 +1,122 @@
+/* 
+ * Typography Defaults
+ * Based on https://type-scale.com/. 
+ */
+html {font-size: 16px;}
+
+body {
+  background-color: white;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
+p {margin-bottom: 1.25em;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.802em;
+}
+
+h2 {font-size: 1.602em;}
+
+h3 {font-size: 1.424em;}
+
+h4 {font-size: 1.266em;}
+
+h5 {font-size: 1.125em;}
+
+small, .text_small {font-size: 0.889em;}
+
+/* Styles */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#content {
+    margin: 5% auto;
+}
+
+div.container {
+    max-width: 95%;
+    width: 600px;
+    margin: auto;
+    line-height: 1.6;
+    padding: 2%;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul > li {
+    margin-right: 10px
+}
+
+#content h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+footer {
+    border-top: 1px gray solid;
+}
+
+a {
+    text-decoration: none;
+    color: #1c77ac
+}
+
+a:hover{
+    background: #1c77ac;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+.essays li {
+    display: flex;
+}
+
+.essays li .meta {
+    margin-right: 10px;
+    width: 50px;
+    border-left: 1px solid lightgrey;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.essay .meta {
+    font-size: small;
+    color: #9eadbd;
+}
+
+.essay .categories {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.essay .categories li {
+    margin-right: 10px;
+}
+
+blockquote {
+    border-left: 5px solid #9eadbd;
+    margin: 1em 10px;
+    padding: 0.5em 20px;
+    font-style: italic;
+}

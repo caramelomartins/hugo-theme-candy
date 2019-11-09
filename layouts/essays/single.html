@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main class="essay">
+    <h1 id="title">{{ .Title }}</h1>
+    <aside class="meta">
+        <div>
+            <span class="date"> {{ .Date.Format "January 2, 2006" }}</span>
+
+            {{ with .Params.Categories }}
+            <ul class="categories">
+                <li><i>in</i></li>
+                {{ range . }}
+                <li><a href="{{ "categories/" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </div>
+    </aside>
+     <div>
+        <article id="content">
+           {{ .Content }}
+        </article>
+    </div>
+</main>
+{{ end }}

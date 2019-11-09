@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main>
+    <p>
+        I like to build and break things. Currently, <b>Site Reliability Engineer</b> for <a href="https://www.claranet.co.uk/">Claranet</a>. These days I write Python and Go, while looking for ways to optimize and automate infrastructure, at the same time.
+    </p>
+
+    <p>
+        I try to use this page for sharing whatever I am interested in or am learning, at any given moment. Here you can also know more <a href="/about/">about me</a>, what <a href="/projects/">projects</a> I am working on or have a look at <a href="/research/">past research</a>. Below, you can find the latest of {{ len .Site.RegularPages }} essays that exist on this website.
+    </p>
+
+    <p>You can get future updates via <a href="/index.xml">RSS</a>.</p>
+
+
+    <h1>Latest Essays</h1>
+    {{ range .Paginator.Pages }}
+    <article>
+        <header>
+            <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+        </header>
+        <p>{{ .Summary }}</p>
+    </article>
+    {{ end }}
+
+    <div>
+        <a href="./essays/">View All {{ len .Site.RegularPages }} Essays</a>
+    </div>
+</main>
+{{ end }}
