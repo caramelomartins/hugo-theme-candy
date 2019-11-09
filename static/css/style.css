@@ -120,3 +120,13 @@ blockquote {
     padding: 0.5em 20px;
     font-style: italic;
 }
+
+pre {
+    padding: 3em 5em 3em 2em;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    border-radius: 7px;
+    border: 2px solid black;
+    font-size:0.8em;
+    overflow-x: auto;
+    font-family: "Fira Mono", monospace;
+}
