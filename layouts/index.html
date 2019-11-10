@@ -22,7 +22,7 @@
     {{ end }}
 
     <div>
-        <a href="./essays/">View All {{ len .Site.RegularPages }} Essays</a>
+        <a href="./essays/">View All {{ len (where .Site.RegularPages "Section" "essays") }} Essays</a>
     </div>
 </main>
 {{ end }}

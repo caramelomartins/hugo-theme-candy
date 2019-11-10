@@ -4,8 +4,11 @@
         <header>
             <h2>{{.Title}}</h2>
         </header>
-        <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
-        {{.Content}}
+        {{ $words := 0 }}
+        {{ range .Pages }}
+            {{ $words = add $words .WordCount }}
+        {{ end }}
+        <p>Here you can explore {{ len .Pages }} essays, with a total of {{ $words }} words.</p>
     </article>
     {{ range .Pages.GroupByDate "2006" }}
     <h3>{{ .Key }}</h3>
