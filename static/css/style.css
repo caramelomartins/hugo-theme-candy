@@ -98,11 +98,6 @@ img {
     margin-bottom: 10px;
 }
 
-.essay .meta {
-    font-size: small;
-    color: #9eadbd;
-}
-
 .essay .categories {
     display: flex;
     list-style-type: none;
@@ -129,4 +124,9 @@ pre {
     font-size:0.8em;
     overflow-x: auto;
     font-family: "Fira Mono", monospace;
+}
+
+.meta {
+    font-size: small;
+    color: #9eadbd;
 }

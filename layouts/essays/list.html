@@ -4,11 +4,7 @@
         <header>
             <h2>{{.Title}}</h2>
         </header>
-        {{ $words := 0 }}
-        {{ range .Pages }}
-            {{ $words = add $words .WordCount }}
-        {{ end }}
-        <p>Here you can explore {{ len .Pages }} essays, with a total of {{ $words }} words.</p>
+        {{.Content}}
     </article>
     {{ range .Pages.GroupByDate "2006" }}
     <h3>{{ .Key }}</h3>

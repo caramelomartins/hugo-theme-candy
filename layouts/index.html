@@ -1,15 +1,6 @@
 {{ define "main" }}
 <main>
-    <p>
-        I like to build and break things. Currently, <b>Site Reliability Engineer</b> for <a href="https://www.claranet.co.uk/">Claranet</a>. These days I write Python and Go, while looking for ways to optimize and automate infrastructure, at the same time.
-    </p>
-
-    <p>
-        I try to use this page for sharing whatever I am interested in or am learning, at any given moment. Here you can also know more <a href="/about/">about me</a>, what <a href="/projects/">projects</a> I am working on or have a look at my <a href="/research/">past research</a>.
-    </p>
-
-    <p>You can get future updates via <a href="/index.xml">RSS</a>.</p>
-
+    {{ .Content }}
 
     <h1>Latest Essays</h1>
     {{ range .Paginator.Pages }}
@@ -17,6 +8,7 @@
         <header>
             <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
         </header>
+        <aside class="meta">{{ .Date.Format "Jan 02, 2006" }} • {{ .ReadingTime }} min</aside>
         <p>{{ .Summary }}</p>
     </article>
     {{ end }}

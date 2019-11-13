@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<section class="categories">
+    <h1>{{ .Title }}</h1>
+
+    <ul>
+        {{ range .Site.Taxonomies.categories }}
+        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
+        {{ end }}
+    </ul>
+</section>
+
+{{ end }}
