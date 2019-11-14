@@ -1,10 +1,10 @@
 {{ define "main" }}
 
-<section class="categories">
+<section class="terms">
     <h1>{{ .Title }}</h1>
 
     <ul>
-        {{ range .Site.Taxonomies.categories }}
+        {{ range .Data.Terms }}
         <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
         {{ end }}
     </ul>
