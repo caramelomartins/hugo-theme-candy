@@ -5,12 +5,14 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ if .Site.Params.Description }}
+    {{ if .IsPage }}
+    <meta name="description" content="{{ .Page.Summary }}">
+    {{ else }}
     <meta name="description" content="{{ .Site.Params.Description }}">
     {{ end }}
 
     <base href="{{ .Site.BaseURL }}">
-    <title> {{ .Title }}</title>
+    <title> {{ if .IsPage }}{{ .Title }} | {{ .Site.Title}}{{ else }}{{ .Site.Title}}{{ end }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{ range .AlternativeOutputFormats -}}
@@ -21,5 +23,8 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet"> 
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
+
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+ </head>
