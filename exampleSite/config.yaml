@@ -1,0 +1,33 @@
+baseurl: "http://example.com/"
+
+title: "Example Site"
+description: ""
+
+contentdir: "content"
+layoutdir: "layout"
+publishdir: "public"
+
+theme: candy
+builddrafts: false
+
+pygmentsCodeFences: true
+pygmentsCodeFencesGuessSyntax: true
+pygmentsStyle: solarized-dark
+
+menu:
+  main:
+    - name: "Essays"
+      identifier: "Essays"
+      url: "/essays/"
+      weight: -110
+
+    - name: "About"
+      identifier: "about"
+      url: "/about/"
+      weight: -100
+
+enableRobotsTXT: true
+canonifyURLs: true
+
+params:
+  author: "Example Author"
