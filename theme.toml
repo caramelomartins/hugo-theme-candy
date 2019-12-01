@@ -4,9 +4,9 @@
 name = "Candy"
 license = "MIT"
 licenselink = "https://github.com/caramelomartins/candy/blob/master/LICENSE"
-description = "A sweet and simple lightweight theme for Hugo."
+description = "A minimalist Hugo theme focused on readability and simplicity."
 homepage = "http://candy.hugomartins.io/"
-min_version = "0.58"
+min_version = "0.59"
 
 [author]
   name = "Hugo Martins"
