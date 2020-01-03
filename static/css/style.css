@@ -126,6 +126,15 @@ pre {
     font-family: "Fira Mono", monospace;
 }
 
+p > code {
+    background: #f9f9fa;
+    border: 1px solid #909090;
+    font-family: Monospace;
+    font-size: 0.84em;
+    padding: 0.1em 0.3em 0;
+    border-radius: 3px;
+}
+
 .meta {
     font-size: small;
     color: #9eadbd;
