@@ -2,7 +2,7 @@
  * Typography Defaults
  * Based on https://type-scale.com/. 
  */
-html {font-size: 16px;}
+html {font-size: 18px;}
 
 body {
   background-color: white;
@@ -46,10 +46,10 @@ body {
 
 div.container {
     max-width: 95%;
-    width: 600px;
-    margin: auto;
+    width: 800px;
     line-height: 1.6;
     padding: 2%;
+    margin-left: 10%;
 }
 
 nav > ul {
@@ -96,6 +96,10 @@ img {
     border-left: 1px solid lightgrey;
     padding-left: 10px;
     margin-bottom: 10px;
+}
+
+.essays ul {
+    padding-left: 0;
 }
 
 .essay .categories {
