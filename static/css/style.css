@@ -2,7 +2,25 @@
  * Typography Defaults
  * Based on https://type-scale.com/. 
  */
-html {font-size: 18px;}
+@media screen and (max-width: 768px) {
+    body {
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        font-size:16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size:12px;
+    }
+}
+
+html {font-size: 21px;}
 
 body {
   background-color: white;
@@ -14,7 +32,7 @@ body {
 p {margin-bottom: 1.25em;}
 
 h1, h2, h3, h4, h5 {
-  margin: 2.75rem 0 1rem;
+  margin: 2rem 0 1rem;
   font-weight: 400;
   line-height: 1.15;
 }
@@ -46,10 +64,10 @@ body {
 
 div.container {
     max-width: 95%;
-    width: 800px;
-    line-height: 1.6;
+    width: 720px;
+    line-height: 1.5;
     padding: 2%;
-    margin-left: 10%;
+    margin:auto;
 }
 
 nav > ul {
@@ -92,10 +110,9 @@ img {
 
 .essays li .meta {
     margin-right: 10px;
-    width: 50px;
-    border-left: 1px solid lightgrey;
-    padding-left: 10px;
-    margin-bottom: 10px;
+    min-width: 50px;
+    width: 10%;
+    font-size: 0.8em
 }
 
 .essays ul {
