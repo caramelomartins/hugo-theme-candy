@@ -3,7 +3,7 @@
     <h1 id="title">{{ .Title }}</h1>
     <aside class="meta">
         <div>
-            <span class="date"> {{ .Date.Format "January 2, 2006" }}</span>
+            <span class="date"> {{ .Date.Format "January 2, 2006" }} • ~{{ .Page.FuzzyWordCount }} words</span>
 
             {{ with .Params.Categories }}
             <ul class="categories">
@@ -15,9 +15,9 @@
             {{ end }}
         </div>
     </aside>
-     <div>
+    <div>
         <article id="content">
-           {{ .Content }}
+            {{ .Content }}
         </article>
     </div>
 </main>

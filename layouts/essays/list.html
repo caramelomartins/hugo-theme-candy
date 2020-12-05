@@ -1,11 +1,22 @@
 {{ define "main" }}
+
+{{ $wordCount := 0 }}
+{{ $readingTime := 0 }}
+{{ range .Pages }}
+{{ $wordCount = (add $wordCount .WordCount) }}
+{{ $readingTime = (add $readingTime .ReadingTime )}}
+{{ end }}
+
 <main class="essays">
     <article>
         <header>
             <h2>{{.Title}}</h2>
         </header>
         {{.Content}}
+        There are {{ len .Pages }} essays here amounting to {{ $wordCount }} words, with a reading time of
+        {{ $readingTime }} minutes.
     </article>
+
     {{ range .Pages.GroupByDate "2006" }}
     <h3>{{ .Key }}</h3>
     <ul>
