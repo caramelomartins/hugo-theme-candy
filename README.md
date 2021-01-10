@@ -11,6 +11,7 @@ A minimalist Hugo theme focused on readability and simplicity. It is currently p
 - Great readability with [Alegreya](https://fonts.google.com/specimen/Alegreya) and [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro).
 - Code highlighting via `pygments`, with some customization.
 - Responsive, works on smaller screens.
+- Integration with Plausible Analytics.
 
 ## Installation
 
