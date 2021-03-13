@@ -13,9 +13,20 @@
             <h2>{{.Title}}</h2>
         </header>
         {{.Content}}
-        There are {{ len .Pages }} essays here amounting to {{ $wordCount }} words, with a reading time of
-        {{ $readingTime }} minutes.
+        There are {{ len .Pages }} essays here amounting to {{ $wordCount }} words.
     </article>
+
+    {{ if gt (len (where .Pages "Params.popular" true)) 0 }}
+    <h3>Popular</h3>
+    <ul>
+        {{ range where .Pages "Params.popular" true }}
+        <li>
+            <div class="meta">{{ .Date.Format "Jan 2006" }}</div>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
 
     {{ range .Pages.GroupByDate "2006" }}
     <h3>{{ .Key }}</h3>
