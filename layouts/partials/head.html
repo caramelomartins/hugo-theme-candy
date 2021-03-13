@@ -26,7 +26,8 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
 
     {{ if .Site.Params.Plausible}}
-    <script async defer data-domain="{{ .Site.Params.Plausible }}" src="https://plausible.io/js/plausible.js"></script>
+    <script async defer data-domain="{{ .Site.Params.Plausible }}"
+        src="https://plausible.io/js/plausible.outbound-links.js"></script>
     {{ end }}
 
     {{ template "_internal/opengraph.html" . }}
