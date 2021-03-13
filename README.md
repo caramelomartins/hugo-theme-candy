@@ -12,6 +12,7 @@ A minimalist Hugo theme focused on readability and simplicity. It is currently p
 - Code highlighting via `pygments`, with some customization.
 - Responsive, works on smaller screens.
 - Integration with Plausible Analytics.
+- List of popular essays based on a custom "popular" field in the front matter.
 
 ## Installation
 
