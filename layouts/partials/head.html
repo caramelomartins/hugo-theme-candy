@@ -5,14 +5,24 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ if .IsPage }}
+    {{ if .IsPage}}
     <meta name="description" content="{{ .Page.Summary }}">
+    {{ else if eq .Kind "taxonomy" }}
+    <meta name="description" content="Essays on {{ .Page.Title }}.">
     {{ else }}
     <meta name="description" content="{{ .Site.Params.Description }}">
     {{ end }}
 
     <base href="{{ .Site.BaseURL }}">
-    <title> {{ if .IsPage }}{{ .Title }} | {{ .Site.Title}}{{ else }}{{ .Site.Title}}{{ end }}</title>
+    <title>
+        {{ if .IsPage }}
+        {{ .Title }} | {{ .Site.Title}}
+        {{ else if eq .Kind "taxonomy" }}
+        {{ .Page.Title }} | {{ .Site.Title }}
+        {{ else }}
+        {{ .Site.Title}} | {{ .Site.Params.Description }}
+        {{end }}
+    </title>
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{ range .AlternativeOutputFormats -}}
@@ -20,7 +30,7 @@
     <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 
-    <link href="{{ .Site.BaseURL }}/css/style.css" type="text/css" rel="stylesheet" />
+    <link href="{{ .Site.BaseURL }}css/style.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
