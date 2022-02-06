@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<main class="series">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.description }}</p>
+
+    {{ range .Pages.ByDate }}
+    <section>
+        <header>
+            <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+        </header>
+        <aside class="meta">{{ .Date.Format "Jan 02, 2006" }} • {{ .ReadingTime }} min</aside>
+        <p>{{ .Summary }}</p>
+    </section>
+    {{ end }}
+</main>
+
+{{ end }}

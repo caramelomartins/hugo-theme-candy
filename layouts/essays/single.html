@@ -9,7 +9,7 @@
             <ul class="categories">
                 <li><i>in</i></li>
                 {{ range . }}
-                <li><a href="{{ "categories/" | absURL}}{{ . | urlize | printf "%s/" }}">{{ . }}</a> </li>
+                <li><a href="{{ " categories/" | absURL}}{{ . | urlize | printf "%s/" }}">{{ . }}</a> </li>
                 {{ end }}
             </ul>
             {{ end }}
